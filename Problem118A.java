@@ -8,7 +8,11 @@ public class Problem118A {
 	{
 	   String S = sr.nextLine();
             S = S.replaceAll("[AEIOUYaeiouy]", "");
-            S= 
+            S = S.toLowerCase();
+            for(int i=0;i<S.length();i++){
+                System.out.print(".");
+                System.out.print(S.charAt(i));               
+            }
 	}
 
 
