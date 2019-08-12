@@ -4,35 +4,23 @@
         public static void main(String[] args) {
      
             Scanner sc = new Scanner(System.in);
-             int n = sc.nextInt();
-             int x= sc.nextInt();
-             int[] X  = new int[x];
-             int y =sc.nextInt();
-             int[] Y = new int[y];
-             for(int i=0;i<n;i++)
-                X[i] = sc.nextInt();
-            
-           
-             
-             for(int i=0;i<y;i++)
-               Y[i] = sc.nextInt();
-
-             int y1=0,x1=0;
-              for(int j=0;j<y;j++){
-                    if(Y[j]==n){
-                      y1= 1;
-                     }
-              }
-             for(int i=0;i<x;i++){
-               
- 
-                if(X[i] ==n)
-                  x1=1;
-                  
-              }
-            if(x1==1 || y1==1)
-                System.out.println("I become the guy .");
-            else
-                System.out.println("Oh, my keyboard!"); 
+            int Level = sc.nextInt();
+            int m = sc.nextInt(),i;
+            ArrayList<Integer> AL = new ArrayList<>();
+            for(i=0;i<m;i++)
+                AL.add(sc.nextInt());
+            m = sc.nextInt();
+            for(i=0;i<m;i++)
+                AL.add(sc.nextInt());
+            Collections.sort(AL);
+            int A=1,x=0;
+            m = AL.size();
+            for(i=0;i<m;i++){
+                if(x<=Level&&AL.get(i)==A){
+                     x = A;
+                     A++;
+                }
+            }
+            System.out.println(x==Level?"I become the guy.":"Oh, my keyboard!");
         }
     }
