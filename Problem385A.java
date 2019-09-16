@@ -1,6 +1,6 @@
-    //============================================================================
-    //problem link: https://codeforces.com/problemset/problem/330/A
-    // Name        : Problem330A.java
+ //============================================================================
+    //problem link: https://codeforces.com/problemset/problem/385/A
+    // Name        : Problem385A.java
     // Author      : Shivam Dwivedi
     // Version     :
     // Copyright   : use it under your responsibility
@@ -27,4 +27,4 @@
                }
              System.out.println(ans);
         }
-    }
+}

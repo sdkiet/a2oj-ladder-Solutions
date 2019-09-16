@@ -1,36 +1,34 @@
 import java.util.*;
-public class Problem230A
+public class Problem233A
 {
     public static void main(String[] args)
     {
-        Scanner input = new Scanner(System.in);
-        int s = input.nextInt(), n = input.nextInt();
-        Dragon[] data = new Dragon[n];
-        for(int i = 0; i<n; i++)
-            data[i] = new Dragon(input.nextInt(), input.nextInt());
-        Arrays.sort(data);
-        boolean res = true;
-        for(int i = 0; i<n; i++)
-        {
-            if(s <= data[i].s)
-            {
-                res = false;
-                break;
-            }
-            s += data[i].b;
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int[] p = new int[n];
+        int[] p1 = new int[n];
+
+        for(int i=1;i<=n;i++){
+             p[i]=i;
+          }
+
+        for(int i=1;i<=n;i++){
+           p1[p[i]] =i;
         }
-        System.out.println(res ? "YES" : "NO");
+
+        for(int i=1;i<=n;i++){
+           if(p1[p[i]]==i && p[i]==i){
+               temp = p1[2*i-1]; 
+               p1[2*i-1] =p1[2*i];
+               p1[2*i] =temp; 
+           }
+         
+        }
+
+      for(int i=1;i<=n;i++){
+      
+       System.out.prin(p1[i]);
+      }
     }
-    public static class Dragon implements Comparable<Dragon>
-    {
-        int s, b;
-        public Dragon(int s, int b)
-        {
-            this.s = s;
-            this.b = b;
-        }
-        public int compareTo(Dragon that) {
-            return this.s - that.s;
-        }
-    }
+  
 }
