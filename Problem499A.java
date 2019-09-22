@@ -1,21 +1,21 @@
-import java.util.*;
-public class Problem499A
-{
-    public static void main(String[] args)
-    {
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        int x = sc.nextInt();
-        int min = Integer.MAX_VALUE;
-        while(n-->0){
-         int f1 =sc.nextInt();
-         int f2 =sc.nextInt();
-         
-          min = Math.min(min,f2);
+    import java.util.*;
+    public class Problem499A {
+     
+        public static void main(String[] args) {
+     
+            Scanner sc = new Scanner(System.in);
+            int n = sc.nextInt();
+            int k = sc.nextInt();
+            int watch = 0;
+            int count = 0;
+            for(int i=0;i<n;i++){
+                int x = sc.nextInt(),y=sc.nextInt();
+                while ((count+k)<x){
+                    count+=k;
+                }
+                watch+= y - count ;
+                count = y;
+            }
+            System.out.println(watch);
         }
-       System.out.println(min);
-
-          
     }
-  
-}
