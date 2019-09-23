@@ -1,4 +1,4 @@
-    //============================================================================
+ //============================================================================
     //problem link: https://codeforces.com/problemset/problem/152/A
     // Name        : Problem152A.java
     // Author      : Shivam Dwivedi
@@ -32,4 +32,4 @@
             
          System.out.println(ans);   
         }
-    }
+}
