@@ -1,5 +1,5 @@
-import java.util.*;
-import java.lang.Math; 
+    import java.util.*;
+    import java.lang.Math; 
         
     /*
         ██╗███╗   ███╗███████╗██╗  ██╗██╗██╗   ██╗ █████╗ ███╗   ███╗██████╗ ██╗    ██╗██╗██╗   ██╗███████╗██████╗ ██╗
@@ -9,37 +9,20 @@ import java.lang.Math;
         ██║██║ ╚═╝ ██║███████║██║  ██║██║ ╚████╔╝ ██║  ██║██║ ╚═╝ ██║██████╔╝╚███╔███╔╝██║ ╚████╔╝ ███████╗██████╔╝██║
         ╚═╝╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═══╝  ╚═╝  ╚═╝╚═╝     ╚═╝╚═════╝  ╚══╝╚══╝ ╚═╝  ╚═══╝  ╚══════╝╚═════╝ ╚═╝
     */
-        
-public class Problem230A
-{
-    public static void main(String[] args)
-    {
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        int[] p = new int[n];
-        int[] p1 = new int[n];
-
-        for(int i=1;i<=n;i++){
-             p[i]=i;
-          }
-
-        for(int i=1;i<=n;i++){
-           p1[p[i]] =i;
-        }
-
-        for(int i=1;i<=n;i++){
-           if(p1[p[i]]==i && p[i]==i){
-               temp = p1[2*i-1]; 
-               p1[2*i-1] =p1[2*i];
-               p1[2*i] =temp; 
-           }
+        public class Problem224A {
          
+        	public static void main(String[] args) {
+        	Scanner sc= new Scanner(System.in);
+        	int s1 = sc.nextInt();
+        	int s2 = sc.nextInt();
+        	int s3 = sc.nextInt();
+        	int a=0,b=0,c=0,sum=0;
+        	
+        	 a = (int)Math.sqrt(((s1*s3)/s2));
+        	 b = (int)Math.sqrt(((s1*s2)/s3));
+        	 c = (int)Math.sqrt(((s2*s3)/s1));
+        	 sum = a+b+c;
+        	 
+        	 System.out.println(sum*4);
+        	}
         }
-
-      for(int i=1;i<=n;i++){
-      
-       System.out.prin(p1[i]);
-      }
-    }
-  
-}
